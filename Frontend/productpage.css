@@ -23,7 +23,6 @@ header {
   font-size: 24px;
   font-weight: bold;
 }
-
 .hero-img {
   display: block;
   width: 50%;
@@ -62,57 +61,18 @@ header {
   color: #5a3e36;
   font-weight: 600;
 }
-.logo {
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  font-weight: bold;
-  margin-right: auto;
-}
 
-.products-container {
+.item-detail {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  color: rgb(6, 0, 0);
+  margin-right: 50px;
+  margin-top: 50px;
+  flex-direction: row;
 }
-
-.product {
-  background: rgb(78, 137, 167);
-  padding: 15px;
-  border-radius: 5px;
-  text-align: center;
-  width: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-}
-
-.product h3 {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.product .quantity-container {
-  display: flex;
-  justify-content: center;
+.img {
+  position: absolute;
+  display: block;
+  margin-left: -30rem;
+  top: 20rem;
   align-items: center;
-  gap: 10px;
-}
-
-button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-button:hover {
-  background-color: rgb(75, 91, 78);
 }
