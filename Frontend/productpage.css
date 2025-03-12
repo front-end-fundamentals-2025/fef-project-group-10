@@ -62,13 +62,6 @@ header {
   justify-content: center;
   background: linear-gradient(to right, #fdf6f0, #fae3d9);
 }
-
-
-
-
-
-
-
 .btn {
   display: inline-block;
   padding: 12px 24px;
@@ -83,8 +76,6 @@ header {
 .btn:hover {
   background: #b36658;
 }
-/* -------------- */
-
 
 html, body {
   height: 100%;
