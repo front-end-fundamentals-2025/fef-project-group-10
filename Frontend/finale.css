@@ -96,3 +96,44 @@ header {
 .btn:hover {
   background: #b36658;
 }
+footer {
+  background-color: #d07c6b;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-bottom: 40px;
+  position: relative;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+/* 4 products per row on medium screens */
+@media (max-width: 1200px) {
+  .product {
+    width: calc(25% - 20px);
+  }
+}
+
+/* 3 products per row on tablets */
+@media (max-width: 900px) {
+  .product {
+    width: calc(33.33% - 20px);
+  }
+}
+
+/* 2 products per row on small tablets/mobiles */
+@media (max-width: 600px) {
+  .product {
+    width: calc(50% - 20px);
+  }
+}
+
+/* 1 product per row on very small screens */
+@media (max-width: 400px) {
+  .product {
+    width: 100%;
+  }
+}
