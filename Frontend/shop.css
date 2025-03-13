@@ -4,6 +4,10 @@ html, body {
   padding: 0;
   font-family: Arial, sans-serif;
 }
+* {
+  box-sizing: border-box;
+}
+
 
 body {
   display: flex;
@@ -74,19 +78,21 @@ header {
   background-color: #d07c6b;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
-  margin-left: 10%;
+  /* margin-left: 10%;  <-- REMOVE THIS */
 }
+
 /* Each individual product card */
 .product {
   background-color: #fdf6f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 20%;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  justify-content: center;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   width: 20%;
+   padding: 15px 0;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   justify-content: center;
   text-align: center;
   display: flex;
   flex-direction: column;
