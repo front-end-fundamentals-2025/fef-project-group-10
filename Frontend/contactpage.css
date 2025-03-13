@@ -1,13 +1,16 @@
-body {
-  font-family: "Poppins", sans-serif;
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #fdf6f0;
-  color: #5a3e36;
+  font-family: Arial, sans-serif;
+}
+* {
+  box-sizing: border-box;
 }
 
 header {
   display: flex;
+  max-width: 100%;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -21,12 +24,7 @@ header {
   font-weight: bold;
 }
 
-.hero-img {
-  display: block;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-}
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -58,58 +56,53 @@ header {
   margin-right: auto;
 }
 
-.hero {
-  height: 100vh;
+body {
   display: flex;
+  flex-direction: column;
+  min-height: 80%;
+  background-color: #d07c6b;
+}
+
+main {
+  flex: 1; 
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  text-align: center;
-  background: linear-gradient(to right, #fdf6f0, #fae3d9);
-}
-
-.hero-content {
-  width: 50%;
-}
-
-.hero h1 {
-  font-family: "Playfair Display", serif;
-  font-size: 48px;
-  font-weight: 700;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  background: #d07c6b;
-  color: #14513e;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s ease;
+/* Form Styling */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 10px;
 }
 
-.btn:hover {
-  background: #b36658;
-}
-footer {
-  background-color: #d07c6b;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  margin-bottom: 40px;
-  position: relative;
+input[type="text"],
+select,
+textarea {
   width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-footer p {
-  margin: 0;
+input[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
+
+input[type="submit"]:hover {
+  background-color: #555
+
+
 /* 4 products per row on medium screens */
 @media (max-width: 1200px) {
   .product {
@@ -136,4 +129,18 @@ footer p {
   .product {
     width: 100%;
   }
+}
+footer {
+  background-color: #d07c6b; 
+  color: #fff;            
+  text-align: center;       
+  padding: 20px 0;           
+  font-size: 14px;          
+  position: relative;       
+  width: 100%;
+  margin-top: auto;
+}
+
+footer p {
+  margin: 0; 
 }
