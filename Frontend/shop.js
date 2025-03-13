@@ -1,54 +1,190 @@
+// Let's wait until the entire page content has loaded before we run any code
 document.addEventListener("DOMContentLoaded", function () {
-  const products = [
-    { id: 1, name: "Acne wash", img: "Assets/Acne wash.jpeg" },
-    { id: 2, name: "Blush", img: "Assets/blush.jpeg" },
-    { id: 3, name: "Brow & lash gel", img: "Assets/brow & lash gel.jpeg" },
-    { id: 4, name: "Cloud cleanser", img: "Assets/Cloud cleanser.jpeg" },
-    { id: 5, name: "Dewy facial mist", img: "Assets/Dewy facial mist.jpeg" },
-    { id: 6, name: "Exfoliator", img: "Assets/Exfoliator.jpeg" },
-    { id: 7, name: "Face serum", img: "Assets/Face serum.jpeg" },
-    { id: 8, name: "Glow serum", img: "Assets/Glow serum.jpeg" },
-    { id: 9, name: "Cloud cleanser", img: "Assets/Cloud cleanser.jpeg" },
-    { id: 10, name: "Hydrating gel moisturizer", img: "Assets/Hydrating gel moisturizer.jpeg" },
-    { id: 11, name: "Lip & cheek balm", img: "Assets/lip and cheek balm.jpeg" },
-    { id: 12, name: "Skin tint", img: "Assets/Skin tint.jpeg" },
-   { id: 13, name: "Soft blur concealer", img: "Assets/soft blur concealer.jpg" },
-   { id: 14, name: "Sun screen", img: "Assets/sunscreen.jpeg" },
-    
-  ];
 
+  // Here we have our array of products. Each product has an id, name, image, and description.
+  const products = [
+    {
+      id: 1,
+      name: "Acne Wash",
+      img: "Assets/Acne wash.jpeg",
+      description: "Our Acne Wash deeply cleanses pores, helping to reduce acne and prevent future breakouts. Gentle enough for daily use, it leaves your skin feeling fresh and smooth."
+    },
+    {
+      id: 2,
+      name: "Blush",
+      img: "Assets/blush.jpeg",
+      description: "Add a natural, healthy glow to your cheeks with our lightweight and long-lasting Blush. Perfect for everyday wear with a smooth, blendable finish."
+    },
+    {
+      id: 3,
+      name: "Brow & Lash Gel",
+      img: "Assets/brow & lash gel.jpeg",
+      description: "Shape and set your brows and lashes with our Brow & Lash Gel. Provides a strong hold without stiffness, leaving a natural, glossy finish."
+    },
+    {
+      id: 4,
+      name: "Cloud Cleanser",
+      img: "Assets/Cloud cleanser.jpeg",
+      description: "Our Cloud Cleanser gently removes dirt and impurities while keeping your skin hydrated. Perfect for sensitive skin with a soft, foamy texture."
+    },
+    {
+      id: 5,
+      name: "Dewy Facial Mist",
+      img: "Assets/Dewy facial mist.jpeg",
+      description: "Hydrate and refresh your skin anytime with our Dewy Facial Mist. Infused with botanical extracts to give you a radiant, dewy glow."
+    },
+    {
+      id: 6,
+      name: "Exfoliator",
+      img: "Assets/Exfoliator.jpeg",
+      description: "Gently exfoliate dead skin cells and reveal smoother skin with our natural Exfoliator. Leaves your skin soft, bright, and ready for hydration."
+    },
+    {
+      id: 7,
+      name: "Face Serum",
+      img: "Assets/Face serum.jpeg",
+      description: "Our Face Serum targets fine lines and uneven texture, delivering deep hydration and promoting a youthful, glowing complexion."
+    },
+    {
+      id: 8,
+      name: "Glow Serum",
+      img: "Assets/Glow serum.jpeg",
+      description: "Achieve an all-day glow with our lightweight Glow Serum. Packed with vitamins and antioxidants to brighten and nourish your skin."
+    },
+    {
+      id: 9,
+      name: "Cloud Cleanser",
+      img: "Assets/Cloud cleanser.jpeg",
+      description: "Reintroducing our Cloud Cleanser: a gentle, hydrating cleanser for everyday use. Perfect for keeping your skin balanced and fresh."
+    },
+    {
+      id: 10,
+      name: "Hydrating Gel Moisturizer",
+      img: "Assets/Hydrating gel moisturizer.jpeg",
+      description: "Our Hydrating Gel Moisturizer delivers intense hydration with a lightweight feel. Ideal for oily or combination skin types."
+    },
+    {
+      id: 11,
+      name: "Lip & Cheek Balm",
+      img: "Assets/lip and cheek balm.jpeg",
+      description: "Versatile and moisturizing, our Lip & Cheek Balm adds a pop of color while nourishing your lips and cheeks. Perfect for on-the-go touch-ups!"
+    },
+    {
+      id: 12,
+      name: "Skin Tint",
+      img: "Assets/Skin tint.jpeg",
+      description: "Even out your skin tone with our breathable Skin Tint. Lightweight coverage that enhances your natural complexion for a flawless look."
+    },
+    {
+      id: 13,
+      name: "Soft Blur Concealer",
+      img: "Assets/soft blur concealer.jpg",
+      description: "Our Soft Blur Concealer covers imperfections effortlessly, offering a smooth, natural finish with buildable coverage."
+    },
+    {
+      id: 14,
+      name: "Sun Screen",
+      img: "Assets/sunscreen.jpeg",
+      description: "Protect your skin with our lightweight Sunscreen. Offers broad-spectrum SPF 50 protection without clogging pores or leaving a white cast."
+    }
+  ];
+    
+
+  // Let's grab the container element where we want to display our products on the shop page
   const container = document.querySelector(".products-container");
 
+  // Now we'll loop through each product and create a product card for it
   products.forEach((product) => {
+
+    // First, we'll create a new div to hold all the product info
     const productElement = document.createElement("div");
     productElement.classList.add("product");
+
+    // Next, we'll fill this div with the product's image, name, quantity controls, and an add-to-cart button
     productElement.innerHTML = `
-            <a href="productpage.html?id=${product.id}" class="product-link">
-            <img src="${product.img}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <div class="quantity-container">
-                <button onclick="decreaseQuantity(${product.id})">-</button>
-                <span id="quantity-${product.id}">1</span>
-                <button onclick="increaseQuantity(${product.id})">+</button>
-            </div>
-            <button class="add-cart"onclick="addToCart(${product.id})">Add to Cart</button>
-        `;
+      <div class="product-link" style="cursor: pointer;">
+        <img src="${product.img}" alt="${product.name}">
+      </div>
+      <h3>${product.name}</h3>
+      <div class="quantity-container">
+        <button onclick="decreaseQuantity(${product.id})">-</button>
+        <span id="quantity-${product.id}">1</span>
+        <button onclick="increaseQuantity(${product.id})">+</button>
+      </div>
+      <button class="add-cart" onclick="addToCart(${product.id})">Add to Cart</button>
+    `;
+
+    // We'll then add this product element to our container in the DOM
     container.appendChild(productElement);
+
+    // When someone clicks on the product image or name, we want to save that product's data and open its details page
+    const productLink = productElement.querySelector(".product-link");
+    productLink.addEventListener("click", () => {
+      // We'll store the selected product in localStorage so we can access it on the product details page
+      localStorage.setItem("selectedProduct", JSON.stringify(product));
+      // Now we'll navigate to the product page
+      window.location.href = "productpage.html";
+    });
   });
+
+  // This function will increase the quantity by 1, but we'll make sure it doesn't go over 10
+  window.increaseQuantity = function (id) {
+    const quantityElement = document.getElementById(`quantity-${id}`);
+    let quantity = parseInt(quantityElement.textContent);
+
+    if (quantity < 10) {
+      quantity++;
+      quantityElement.textContent = quantity;
+    } else {
+      alert("Maximum quantity is 10.");
+    }
+  };
+
+  // This function will decrease the quantity by 1, but we won't let it go below 1
+  window.decreaseQuantity = function (id) {
+    const quantityElement = document.getElementById(`quantity-${id}`);
+    let quantity = parseInt(quantityElement.textContent);
+
+    if (quantity > 1) {
+      quantity--;
+      quantityElement.textContent = quantity;
+    }
+  };
+
+  // This function will handle adding products to the cart
+  window.addToCart = function (id) {
+    // First, we'll find the product by its id
+    const product = products.find((p) => p.id === id);
+    const quantity = parseInt(document.getElementById(`quantity-${id}`).textContent);
+
+    // If we can't find the product, we'll alert the user
+    if (!product) {
+      alert("Product not found.");
+      return;
+    }
+
+    // Let's get our existing cart from localStorage, or start with an empty cart if it's not there yet
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Now we'll check if this product is already in the cart
+    const existingProduct = cart.find((item) => item.id === id);
+
+    if (existingProduct) {
+      // If it is, we'll just increase its quantity
+      existingProduct.quantity += quantity;
+    } else {
+      // If it's not, we'll add it as a new item
+      cart.push({
+        ...product,
+        quantity: quantity
+      });
+    }
+
+    // After that, we'll save the updated cart back to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Finally, let's alert the user that their product was added
+    alert(`${product.name} added to cart!`);
+  };
+
 });
-
-function increaseQuantity(id) {
-  const quantityElement = document.getElementById(`quantity-${id}`);
-  quantityElement.textContent = parseInt(quantityElement.textContent) + 1;
-}
-
-function decreaseQuantity(id) {
-  const quantityElement = document.getElementById(`quantity-${id}`);
-  if (parseInt(quantityElement.textContent) > 1) {
-    quantityElement.textContent = parseInt(quantityElement.textContent) - 1;
-  }
-}
-
-function addToCart(id) {
-  alert(`Product ${id} added to cart!`);
-}
