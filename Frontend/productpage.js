@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector(".products-container");
 
-  // we get the selected product from localStorage
+  // ChatGPT showed us how to use localStorage to pass data between pages
   const productData = localStorage.getItem("selectedProduct");
 
   if (!productData) {
@@ -15,10 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     return;
   }
-
+  // ChatGPT explained we need to parse JSON strings back into objects
   const product = JSON.parse(productData);
 
-  container.innerHTML = `
+  container.innerHTML = `    //chatgpt helped create the structure and perse it 
     <section class="hero">
 
       <!-- Left Side -->
@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.increaseQuantity = function () {
     const quantityElement = document.getElementById("quantity");
     let quantity = parseInt(quantityElement.textContent);
+        // ChatGPT said we should limit max quantity to avoid crazy numbers!
     if (quantity < 10) {
       quantityElement.textContent = quantity + 1;
     } else {

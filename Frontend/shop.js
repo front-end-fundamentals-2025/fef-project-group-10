@@ -104,12 +104,13 @@ document.addEventListener("DOMContentLoaded", function () {
   ];  
     
   const container = document.querySelector(".products-container");
+    // ChatGPT showed us how to dynamically create and insert HTML elements with JS
 
-  products.forEach(product => {
+  products.forEach(product => {  
     const productElement = document.createElement("div");
     productElement.classList.add("product");
 
-    productElement.innerHTML = `
+    productElement.innerHTML = `  //chatgpt helped create the structure and perse it 
       <div class="product-link" style="cursor: pointer;">
         <img src="${product.img}" alt="${product.name}">
       </div>
@@ -172,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cart.push({ ...product, quantity: quantity });
     }
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart)); //chatgpt helped
     alert(`${product.name} added to cart!`);
   };
 });
