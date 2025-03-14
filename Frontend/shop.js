@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", function () {
   products.forEach(product => {  
     const productElement = document.createElement("div");
     productElement.classList.add("product");
-
+//chatgpt helped create the structure and perse it 
     productElement.innerHTML = `  //chatgpt helped create the structure and perse it 
       <div class="product-link" style="cursor: pointer;">
         <img src="${product.img}" alt="${product.name}">
