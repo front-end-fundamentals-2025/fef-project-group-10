@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const productElement = document.createElement("div");
     productElement.classList.add("product");
 //chatgpt helped create the structure and perse it 
-    productElement.innerHTML = `  //chatgpt helped create the structure and perse it 
+    productElement.innerHTML = `   
       <div class="product-link" style="cursor: pointer;">
         <img src="${product.img}" alt="${product.name}">
       </div>
