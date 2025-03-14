@@ -6,98 +6,98 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       id: 1,
       name: "Acne Wash",
-      img: "Assets/Acne wash.jpeg",
+      img: "Acne wash.jpeg",
       description: "Our Acne Wash deeply cleanses pores, helping to reduce acne and prevent future breakouts. Gentle enough for daily use, it leaves your skin feeling fresh and smooth.",
       price: 18
     },
     {
       id: 2,
       name: "Blush",
-      img: "Assets/blush.jpeg",
+      img: "blush.jpeg",
       description: "Add a natural, healthy glow to your cheeks with our lightweight and long-lasting Blush. Perfect for everyday wear with a smooth, blendable finish.",
       price: 22
     },
     {
       id: 3,
       name: "Brow & Lash Gel",
-      img: "Assets/brow & lash gel.jpeg",
+      img: "brow & lash gel.jpeg",
       description: "Shape and set your brows and lashes with our Brow & Lash Gel. Provides a strong hold without stiffness, leaving a natural, glossy finish.",
       price: 20
     },
     {
       id: 4,
       name: "Cloud Cleanser",
-      img: "Assets/Cloud cleanser.jpeg",
+      img: "Cloud cleanser.jpeg",
       description: "Our Cloud Cleanser gently removes dirt and impurities while keeping your skin hydrated. Perfect for sensitive skin with a soft, foamy texture.",
       price: 19
     },
     {
       id: 5,
       name: "Dewy Facial Mist",
-      img: "Assets/Dewy facial mist.jpeg",
+      img: "Dewy facial mist.jpeg",
       description: "Hydrate and refresh your skin anytime with our Dewy Facial Mist. Infused with botanical extracts to give you a radiant, dewy glow.",
       price: 25
     },
     {
       id: 6,
       name: "Exfoliator",
-      img: "Assets/Exfoliator.jpeg",
+      img: "Exfoliator.jpeg",
       description: "Gently exfoliate dead skin cells and reveal smoother skin with our natural Exfoliator. Leaves your skin soft, bright, and ready for hydration.",
       price: 24
     },
     {
       id: 7,
       name: "Face Serum",
-      img: "Assets/Face serum.jpeg",
+      img: "Face serum.jpeg",
       description: "Our Face Serum targets fine lines and uneven texture, delivering deep hydration and promoting a youthful, glowing complexion.",
       price: 30
     },
     {
       id: 8,
       name: "Glow Serum",
-      img: "Assets/Glow serum.jpeg",
+      img: "Glow serum.jpeg",
       description: "Achieve an all-day glow with our lightweight Glow Serum. Packed with vitamins and antioxidants to brighten and nourish your skin.",
       price: 32
     },
     {
       id: 9,
       name: "Cloud Cleanser",
-      img: "Assets/Cloud cleanser.jpeg",
+      img: "Cloud cleanser.jpeg",
       description: "Reintroducing our Cloud Cleanser: a gentle, hydrating cleanser for everyday use. Perfect for keeping your skin balanced and fresh.",
       price: 19
     },
     {
       id: 10,
       name: "Hydrating Gel Moisturizer",
-      img: "Assets/Hydrating gel moisturizer.jpeg",
+      img: "Hydrating gel moisturizer.jpeg",
       description: "Our Hydrating Gel Moisturizer delivers intense hydration with a lightweight feel. Ideal for oily or combination skin types.",
       price: 28
     },
     {
       id: 11,
       name: "Lip & Cheek Balm",
-      img: "Assets/lip and cheek balm.jpeg",
+      img: "lip and cheek balm.jpeg",
       description: "Versatile and moisturizing, our Lip & Cheek Balm adds a pop of color while nourishing your lips and cheeks. Perfect for on-the-go touch-ups!",
       price: 14
     },
     {
       id: 12,
       name: "Skin Tint",
-      img: "Assets/Skin tint.jpeg",
+      img: "Skin tint.jpeg",
       description: "Even out your skin tone with our breathable Skin Tint. Lightweight coverage that enhances your natural complexion for a flawless look.",
       price: 26
     },
     {
       id: 13,
       name: "Soft Blur Concealer",
-      img: "Assets/soft blur concealer.jpg",
+      img: "soft blur concealer.jpg",
       description: "Our Soft Blur Concealer covers imperfections effortlessly, offering a smooth, natural finish with buildable coverage.",
       price: 20
     },
     {
       id: 14,
       name: "Sun Screen",
-      img: "Assets/sunscreen.jpeg",
+      img: "sunscreen.jpeg",
       description: "Protect your skin with our lightweight Sunscreen. Offers broad-spectrum SPF 50 protection without clogging pores or leaving a white cast.",
       price: 27
     }
