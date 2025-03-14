@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // ChatGPT explained we need to parse JSON strings back into objects
   const product = JSON.parse(productData);
-
-  container.innerHTML = `    //chatgpt helped create the structure and perse it 
+//chatgpt helped create the structure and perse it 
+  container.innerHTML = `    
     <section class="hero">
 
       <!-- Left Side -->
