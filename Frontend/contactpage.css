@@ -6,7 +6,6 @@ body {
   color: #5a3e36;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -44,7 +43,6 @@ header {
   font-weight: 600;
 }
 
-/* Hero Section Layout */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -54,7 +52,6 @@ header {
   background: linear-gradient(to right, #fdf6f0, #fae3d9);
 }
 
-/* Left column */
 .hero-content.company-info {
   justify-content: center;
   align-items: center;
@@ -73,7 +70,6 @@ header {
   margin-bottom: 20px;
 }
 
-/* Right column wrapper for centering */
 .hero-content.form-container {
   display: flex;
   justify-content: center;
@@ -81,7 +77,6 @@ header {
   width: 50%;
 }
 
-/* Form card styling */
 .form-card {
   background-color: #fff;
   padding: 40px;
@@ -91,9 +86,8 @@ header {
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  animation: fadeIn 3s ease-out 0.5s; /* 0.5s delay for smoothness */
+  animation: fadeIn 3s ease-out 0.5s; 
 }
-
 .form-card h2 {
   margin-bottom: 20px;
   font-size: 24px;
@@ -101,7 +95,6 @@ header {
   text-align: center;
 }
 
-/* Contact Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -128,7 +121,6 @@ header {
   min-height: 100px;
 }
 
-/* Button */
 .btn {
   background-color: #d07c6b;
   color: #fff;
@@ -144,7 +136,6 @@ header {
   background-color: #b36658;
 }
 
-/* Footer */
 footer {
   background-color: #d07c6b;
   color: #fff;
@@ -155,7 +146,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -172,7 +162,6 @@ footer {
   }
 }
 
-/* ✅ Fade In Animation (slower) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -182,7 +171,6 @@ footer {
   }
 }
 
-/* ✅ Slide Up Animation (slower) */
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -193,3 +181,4 @@ footer {
     transform: translateY(0);
   }
 }
+
