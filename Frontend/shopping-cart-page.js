@@ -1,4 +1,3 @@
-<-- The following lines of code was adapted from https://www.youtube.com/watch?v=70vr4MJai90&feature=youtu.be by Eveline -->
 document.addEventListener("DOMContentLoaded", () => {
     const cartItemsContainer = document.getElementById("cart-items");
     const totalItemsElement = document.getElementById("total-items");
@@ -70,3 +69,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCart();
   });
   
+  <-- The following lines of code was adapted from https://www.youtube.com/watch?v=70vr4MJai90&feature=youtu.be by Eveline -->
