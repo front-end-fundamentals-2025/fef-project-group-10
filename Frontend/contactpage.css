@@ -4,33 +4,15 @@ body {
   padding: 0;
   background-color: #fdf6f0;
   color: #5a3e36;
+}
+
+header {
   display: flex;
-  flex-direction: column;
-  min-height: 80%;
-}
-/* CONTACT INFO IN HEADER */
-.contact-header-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-end;
-  margin-right: 20px;
-  font-size: 14px;
-  color: #5a3e36;
-}
-
-.contact-header-info p {
-  margin: 2px 0;
-}
-
-.contact-header-info a {
-  text-decoration: none;
-  color: #5a3e36;
-  transition: color 0.3s;
-}
-
-.contact-header-info a:hover {
-  color: #d07c6b;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -39,6 +21,12 @@ body {
   font-weight: bold;
 }
 
+.hero-img {
+  display: block;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -70,30 +58,49 @@ body {
   margin-right: auto;
 }
 
-body {
+.hero {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  min-height: 80%;
-  background-color: #d07c6b;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to right, #fdf6f0, #fae3d9);
 }
 
-main {
-  flex: 1;
+.hero-content {
+  width: 50%;
 }
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
   margin-bottom: 20px;
 }
 
-<section class = "contact-info"
-  <h2>email:</h2>
-  <p>glosskin@gs.se</p>
-  <h3>Phone</h3>
-  <p>+4673912625</p>
-<section>
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #d07c6b;
+  color: #14513e;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
 
+.btn:hover {
+  background: #b36658;
+}
+
+
+footer p {
+  margin: 0;
+}
 /* 4 products per row on medium screens */
 @media (max-width: 1200px) {
   .product {
@@ -121,18 +128,55 @@ main {
     width: 100%;
   }
 }
-
-footer {
-  background-color: #d07c6b;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  margin-bottom: 40px;
-  position: relative;
-  width: 100%;
-}
-
-footer p {
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
   margin: 0;
+  padding: 20px;
 }
+
+.contact-form {
+  max-width: 500px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.contact-form input[type="submit"] {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1em;
+}
+
+.contact-form input[type="submit"]:hover {
+  background: #555;
+}
+
