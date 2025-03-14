@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="product">
             <img src="${product.img}" alt="${product.name}">
             <h3>${product.name}</h3>
+            <h3>${product.price} $ </h3>
+
           <div class="quantity-container">
             <button onclick="decreaseQuantity()">-</button>
             <span id="quantity">1</span>
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
           Dermatologically tested and perfect for all skin types, this product offers hydration and lasting protection.
         </p>
 
-        <button class="btn buy-now" onclick="buyNow()">Buy Now</button>
+        <button class="btn buy-now" onclick="addToCart(${product.id})">Buy Now</button>
       </div>
 
     </section>
@@ -79,4 +81,32 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(`Buying ${product.name} now!`);
     // we'll Add logic here to redirect or process purchase
   };
+
+  window.addToCart = function () {
+    const quantity = parseInt(document.getElementById("quantity").textContent);
+  
+    // Get the existing cart from localStorage (or create a new one)
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+    // Check if the product already exists in the cart
+    const existingProduct = cart.find(item => item.id === product.id);
+  
+    if (existingProduct) {
+      // If it exists, increase the quantity
+      existingProduct.quantity += quantity;
+    } else {
+      // If not, add it as a new item
+      cart.push({
+        ...product,
+        quantity: quantity
+      });
+    }
+  
+    // Save the updated cart back to localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+  
+    // Notify the user
+    alert(`You added ${quantity} of ${product.name} to your cart!`);
+  };
+  
 });
