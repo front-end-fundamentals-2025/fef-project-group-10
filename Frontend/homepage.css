@@ -96,16 +96,7 @@ header {
 .btn:hover {
   background: #b36658;
 }
-footer {
-  background-color: #d07c6b;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  margin-bottom: 40px;
-  position: relative;
-  width: 100%;
-}
+
 
 footer p {
   margin: 0;
